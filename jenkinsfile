@@ -32,5 +32,16 @@ pipeline{
                 '''
             }
         }
+
+        stage('Docker build'){
+            steps{
+                sh '''
+                    printenv
+                    echo "Building the Docker image..."
+                    # Add your Docker build commands here
+                    docker build -t devops:latest .
+                '''
+            }
+        }
     }
 }
