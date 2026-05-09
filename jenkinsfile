@@ -1,0 +1,30 @@
+pipeline{
+    agent any
+    stages{
+        stage('Git-Checkout'){
+            steps{
+                git url: 'https://github.com/QuntamVector/DevSecOps-AI-Powered.git', branch: 'main'
+            }
+        }
+
+        stage('Compile'){
+            steps{
+                sh '''
+                    echo "Compiling the code..."
+                    # Add your compilation commands here
+                    mvn compile
+                '''
+            }
+        }
+
+        stage('Build'){
+            steps{
+                sh '''
+                    echo "Building the application..."
+                    # Add your build commands here
+                    mvn package
+                '''
+            }
+        }
+    }
+}
