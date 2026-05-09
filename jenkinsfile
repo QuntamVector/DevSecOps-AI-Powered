@@ -6,6 +6,10 @@ pipeline{
         jdk 'java-17'
     }
 
+    environment {
+        IMAGE_NAME = 'manojkrishnappa/devops-pipeline:${GIT_COMMIT}'
+    }
+
     stages{
         stage('Git-Checkout'){
             steps{
@@ -39,7 +43,7 @@ pipeline{
                     printenv
                     echo "Building the Docker image..."
                     # Add your Docker build commands here
-                    docker build -t devops:latest .
+                    docker build -t ${IMAGE_NAME} .
                 '''
             }
         }
@@ -54,6 +58,16 @@ pipeline{
                         '''
                     }
                 }
+            }
+        }
+
+        stage('Docker Push'){
+            steps{
+                sh '''
+                    echo "Pushing the Docker image to Docker Hub..."
+                    # Add your Docker push commands here
+                    docker push ${IMAGE_NAME}
+                '''
             }
         }
     }
