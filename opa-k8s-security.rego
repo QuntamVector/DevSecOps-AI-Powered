@@ -4,6 +4,6 @@ package main
 deny contains msg if {
   input.kind == "Service"
 # Service should use ClusterIP type
-  input.spec.type != "ClusterIP"
-  msg = "Service type should be ClusterIP"
+  input.spec.type != "LoadBalancer"
+  msg = "Service type should be LoadBalancer"
 }
