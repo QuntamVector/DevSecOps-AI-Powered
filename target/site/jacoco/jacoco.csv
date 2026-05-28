@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Game Application,com.gameapp.config,SecurityConfig,0,113,0,0,0,25,0,7,0,7
+Game Application,com.gameapp.service,UserService,0,124,0,8,0,25,0,14,0,10
+Game Application,com.gameapp.model,User,35,87,2,4,11,24,7,18,5,17
+Game Application,com.gameapp,GameAppApplication,5,3,0,0,2,1,1,1,1,1
+Game Application,com.gameapp.controller,AuthController,7,158,5,21,2,39,5,13,0,5
+Game Application,com.gameapp.controller,DashboardController,0,88,0,0,0,19,0,7,0,7

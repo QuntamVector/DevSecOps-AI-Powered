@@ -17,7 +17,7 @@ pipeline{
             steps{
                 script{
                     dir("terraform"){
-                        git url: 'https://github.com/QuntamVector/DevSecOps-AI-Powered.git',branch: 'terraform'
+                        git url: 'https://github.com/meghesh231994/DevSecOps-AI-Powered.git',branch: 'terraform'
                     }
                 }
             }

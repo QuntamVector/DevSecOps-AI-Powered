@@ -18,7 +18,7 @@ resource "aws_subnet" "quantam_subnet" {
   vpc_id     = aws_vpc.quantam_vpc.id
   cidr_block = cidrsubnet(aws_vpc.quantam_vpc.cidr_block, 8, count.index)
 
-  availability_zone       = element(["ap-northeast-1a", "ap-northeast-1c"], count.index)
+  availability_zone       = element(["ap-south-1a", "ap-south-1b"], count.index)
   map_public_ip_on_launch = true
 
   tags = {
